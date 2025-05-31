@@ -12,6 +12,7 @@ app.get('/', async (request, reply) => {
   return { hello: 'world' }
 })
 
+console.log('LAUNCHING APP')
 // Pour Passenger : exporte l'instance http.Server
 await app.ready()
 export default app.server

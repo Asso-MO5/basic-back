@@ -1,11 +1,6 @@
-import Fastify from 'fastify'
+import app from './app.js'
 
-const app = Fastify({ logger: true })
-
-app.get('/', async (req, reply) => {
-  return { hello: 'world' }
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log(`✅ Listening on http://localhost:${port}`)
 })
-
-await app.ready()
-
-export default app.server

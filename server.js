@@ -1,13 +1,11 @@
-// Import the framework and instantiate it
 import Fastify from 'fastify'
-const fastify = Fastify({
-  logger: true
-})
 
-// Declare a route
-fastify.get('/', async function handler(request, reply) {
+const app = Fastify({ logger: true })
+
+app.get('/', async (req, reply) => {
   return { hello: 'world' }
 })
 
-// Run the server!
-export default fastify
+await app.ready()
+
+export default app.server

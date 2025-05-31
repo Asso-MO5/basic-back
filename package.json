@@ -2,7 +2,7 @@
   "name": "basic-back",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "app.js",
   "repository": "git@github.com:Asso-MO5/basic-back.git",
   "author": "Kazerlelutin <b@bouteiller.contact>",
   "license": "MIT",
